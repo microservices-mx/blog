@@ -1,0 +1,91 @@
+# Site
+name: Microservices MX
+description: Microservicios en tu idioma
+meta_description: "Una fuente de contenido en español para los entusiastas en soluciones basadas con arquitectura de microservicios."
+logo: 'assets/images/favicon-32x32.png'
+favicon: 'assets/images/favicon.ico'
+#paginate: 12
+baseurl: /blog
+email: 'ades76mx-microservices@yahoo.com'
+google_analytics: 'UA-119132347-2'
+facebook_pixel: '1581831518729998'
+disqus: 'microservices_mx'
+sharethis: '<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a6b2fe4fb197a0011c589f6&product=sticky-share-buttons"></script>'
+
+# Microservices - ecommerce
+product_list:
+  - product:
+      name: Taller Microservices MX
+      price: 500
+      image_url: http://localhost
+  - product:
+      name: Plan de Aprendizaje
+      price: 1000
+  - product:
+      name: Diplomado Microservices MX
+      price: 3000
+currency: MXN
+
+# Authors
+authors:
+  ades:
+    name: Adrian
+    display_name: AdES
+    gravatar: 7a2464d4f73bc942f3e8878cdfa40eca
+    email: ades76mx-microservices@yahoo.com
+    web: https://microservicios.com.mx
+    twitter: https://twitter.com/AdES_MX
+    description: "Autor en Microservicios MX, arquitecto de soluciones, su principal experiencia en desarrollo Java es en implementaciones backend como integrador de sistemas en la industria de telecomunicaciones. Es un apasionado de las nuevas tecnologías y siempre está tratando de introducir el \"estado del arte\" en sus proyectos."
+
+# Plugins
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-archives
+  - jekyll-feed
+#  - jekyll-seo-tag
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Other
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/workspace.xml
+
+# Collections
+collections:
+  workshops:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: workshops
+    values:
+      layout: workshop
+
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 6
+  offset: 2
+  permalink: '/posts/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2

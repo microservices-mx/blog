@@ -1,0 +1,46 @@
+<!-- begin post -->
+{% assign author = site.authors[post.author] %}
+<div class="col-sm-6">
+<div class="card">
+    <div class="row">
+        <div class="col-md-5 wrapthumbnail">
+            <a href="{{ post.url | absolute_url }}">
+            {% if post.image %}
+                {% comment %} Validate if the post was auto-generated with blog-generator tool, if so, assign the external image to the src image {% endcomment %}
+                {% if post.external_image %}
+                    {% assign imgSrc = post.image %}
+                {% else %}
+                    {% capture imgSrc %}
+                    {{ site.baseurl }}/{{ post.image }}
+                    {% endcapture %}
+                {% endif %}
+                <div class="thumbnail" style="background-image:url({{ imgSrc }});">
+                </div>
+            {% endif %}
+            </a>
+        </div>
+        <div class="col-md-7">
+            <div class="card-block">
+                <h2 class="card-title"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+                <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:20 }}</h4>
+                <div class="metafooter">
+                    <div class="wrapfooter">
+                        {% if post.author %}
+                        <span class="meta-footer-thumb">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
+                        </span>
+                        <span class="author-meta">
+                        <span class="post-name"><a target="_blank" href="{{ author.web }}">{{ author.display_name }}</a></span><br/>
+                        {% endif %}
+                        <span class="post-date">{{ post.date | date_to_string }}</span>
+                        </span>
+                        <span class="post-read-more"><a href="{{ post.url | absolute_url }}" title="Leer más"><i class="fa fa-link"></i></a></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- end post -->

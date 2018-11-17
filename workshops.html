@@ -1,0 +1,43 @@
+---
+layout: page
+title: Planes de Aprendizaje
+---
+
+</div>
+</div>
+<!-- We've temporary closed main-content and container to have a full width intro -->
+
+
+<!-- Home Jumbotron
+================================================== -->
+<!--<section class="intro">
+    <div class="wrapintro">
+        <h1><strong>Microservicios MX</strong></h1>
+        <h2 class="lead"><strong>Microservicios en tu idioma.</strong> Una fuente de contenido en español para los entusiastas interesados en la
+            creación o migración de sus soluciones basadas en arquitectura monolica a una arquitectura de microservicios.</h2>
+    </div>
+</section>-->
+
+<!-- We reopen main-content and container -->
+
+<div class="container">
+    <div class="main-content">
+        <!-- Featured
+        ================================================== -->
+        <section class="featured-posts">
+
+            <div class="section-title">
+                <h2><span>DevOps y Microservicios</span></h2>
+            </div>
+
+            <div class="row listfeaturedtag">
+
+            {% for post in site.workshops %}
+
+                    {% include featuredbox.html %}
+
+            {% endfor %}
+
+            </div>
+
+        </section>

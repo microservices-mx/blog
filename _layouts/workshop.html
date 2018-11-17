@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+<section>
+    <div class="mainheading">
+        <h1 class="posttitle">{{ page.title }}</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="animated flipInY col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <div class="card featured-posts">
+                    <div class="card-body">
+                    <p class="card-text">{{ page.excerpt | strip_html }}</p>
+                        <div class="">
+                            <div class="product_price">
+                                <h1 class="price">{{page.price}} MX$</h1>
+                                <span class="price-tax">{{page.compare_at_price}} MX$</span>
+                                <br>
+                            </div>
+                        </div>
+
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <div class="form-group row text-center">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="{{ page.paypal_button_id }}">
+                                <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                                <a href="{{ site.baseurl }}/payment-methods" class="btn btn-primary">OTRAS FORMAS DE PAGO</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <strong>Promoción:</strong> descuento de 33%
+                        <p class="card-text"><small class="text-muted">Compra 3 talleres, paga 2</small></p>
+                    </div>
+
+                </div>
+
+                <div class="section-title">
+                    <h2><span>Lo que aprenderás</span></h2>
+                </div>
+
+                <ul style="list-none;">
+                    {% for learn in page.what_you_learn %}
+                        <li>{{ learn }}</li>
+                    {% endfor %}
+                </ul>
+
+                <div class="section-title">
+                    <h2><span>Requisitos</span></h2>
+                </div>
+                <ul>
+                    {% for req in page.requirements %}
+                        <li>{{ req }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="section-title">
+                    <h2><span>Descripción</span></h2>
+                </div>
+                <div class="article-post">
+                    {{content}}
+                </div>
+
+            </div>
+
+            <!-- include workshop topics -->
+            <div class="sidebar">
+                <h2 class="posttitle">Contenido del Curso</h2>
+                <div class="sidebar-section">
+                {% for module in page.content_of_course %}
+                    <h5><span>{{module.title}}</span></h5>
+                    <ul style="list-none;">
+                        {% for topic in module['topics'] %}
+                            <li>{{ forloop.index }}. {{ topic }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if page.comments == true %}
+    <div id="comments" class="row mb-5">
+        <div class="col-md-8">              
+            {% include disqus.html %}                
+        </div>
+    </div>
+    
+    {% endif %}
+    
+</section>
