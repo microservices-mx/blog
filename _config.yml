@@ -63,6 +63,9 @@ exclude:
 
 # Collections
 collections:
+  posts:
+    output: true
+    permalink: /:collection/:path/
   workshops:
     output: true
     permalink: /:collection/:path/
@@ -71,10 +74,14 @@ collections:
 defaults:
   - scope:
       path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
       type: workshops
     values:
       layout: workshop
-
 
 # Pagination Settings
 pagination:
