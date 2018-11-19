@@ -1,16 +1,18 @@
 # Site
 name: Microservices MX
+# many plugins and themes expect site.title to be used instead of name
+title: Microservices MX
 description: Microservicios en tu idioma
 meta_description: "Una fuente de contenido en español para los entusiastas en soluciones basadas con arquitectura de microservicios."
 logo: 'assets/images/favicon-32x32.png'
 favicon: 'assets/images/favicon.ico'
-#paginate: 12
+paginate: 8
 baseurl: /blog
 email: 'ades76mx-microservices@yahoo.com'
 google_analytics: 'UA-119132347-2'
 facebook_pixel: '1581831518729998'
 disqus: 'microservices_mx'
-sharethis: '<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a6b2fe4fb197a0011c589f6&product=sticky-share-buttons"></script>'
+sharethis: '<script async src="//platform-api.sharethis.com/js/sharethis.js#property=5bf2aa366ef16900117dd772&product="sticky-share-buttons"></script>'
 
 # Microservices - ecommerce
 product_list:
@@ -39,11 +41,13 @@ authors:
 
 # Plugins
 plugins:
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-archives
   - jekyll-feed
 #  - jekyll-seo-tag
-    
+
+paginate_path: "/blog/post:num/"
+
 # Archives
 jekyll-archives:
   enabled:
@@ -60,12 +64,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .idea/workspace.xml
+  - vendor
+  - node_modules
 
+# https://github.com/jekyll/jekyll/issues/6702#issuecomment-362396126
 # Collections
 collections:
-  posts:
-    output: true
-    permalink: /:collection/:path/
   workshops:
     output: true
     permalink: /:collection/:path/
@@ -73,26 +77,6 @@ collections:
 # Defaults
 defaults:
   - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-  - scope:
-      path: ""
       type: workshops
     values:
       layout: workshop
-
-# Pagination Settings
-pagination:
-  enabled: true
-  per_page: 6
-  offset: 2
-  permalink: '/posts/:num/'
-  title: ':title - page :num of :max'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-  trail:
-    before: 2
-    after: 2

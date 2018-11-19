@@ -5,6 +5,6 @@ author: AdES
 date:   2018-11-09 06:46
 excerpt: "Las 10 mejores páginas de Facebook de todos los tiempos sobre arquitectura TI"
 external_image: true
-image:  https://splashbase.s3.amazonaws.com/mazwai/regular/FDR_and_7th_Street_Skateboarding-HD.webm%3F1402518604
+image:  https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mxrv62sm2I1st5lhmo1_1280.jpg
 ---
 Las 10 mejores páginas de Facebook de todos los tiempos sobre arquitectura TI
