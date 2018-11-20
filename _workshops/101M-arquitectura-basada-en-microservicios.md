@@ -21,7 +21,10 @@ price:  500
 compare-at-price:   750
 comments: 
 tags:
-- DevOps,Microservicios
+- DevOps
+- Microservicios
+start:  2018-12-07T15:00:00
+end:    2018-12-07T20:00:00
 ---
 
 Los microservicios permiten a los arquitectos, desarrolladores e

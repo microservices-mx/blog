@@ -20,6 +20,8 @@ compare_at_price: 750
 comments: 
 tags:
 - devops
+start:  2018-12-07T09:00:00
+end:    2018-12-07T14:00:00
 ---
 
 Kubernetes es una herramienta central en DevOps y es el motor de orquestación

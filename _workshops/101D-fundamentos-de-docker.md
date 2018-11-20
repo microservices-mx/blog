@@ -20,6 +20,8 @@ compare-at-price: 750
 comments: 
 tags:
 - devops
+start:  2018-12-06T09:00:00
+end:    2018-12-06T14:00:00
 ---
 
 Los contenedores son la base del despliegue de aplicaciones modernas y

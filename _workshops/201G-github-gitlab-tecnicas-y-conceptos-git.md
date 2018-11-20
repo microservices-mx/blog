@@ -22,7 +22,9 @@ price:  500
 compare-at-price:   650
 comments: 
 tags:
-- 
+- git
+start:  2018-12-05T16:00:00
+end:    2018-12-05T20:00:00
 ---
 
 Mejora tus habilidades de Git y explora técnicas y conceptos intermedios

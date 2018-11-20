@@ -65,6 +65,8 @@ paypal_button_id: XGL43KTMTW62L
 tags:
   - git
   - devops
+start:  2018-12-05T09:00:00
+end:    2018-12-05T11:45:00
 ---
 
 El control de versiones es una habilidad indispensable que los desarrolladores deben dominar,

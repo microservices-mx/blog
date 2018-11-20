@@ -21,7 +21,9 @@ price:  500
 compare-at-price:   750
 comments: 
 tags:
-- 
+- devops
+start:  2018-12-06T15:00:00
+end:    2018-12-06T20:00:00
 ---
 
 Durante el taller, descubrirás cómo se comunican los contenedores en una red,

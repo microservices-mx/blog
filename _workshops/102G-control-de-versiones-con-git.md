@@ -65,6 +65,8 @@ paypal_button_id: 96W8FXGE94JPG
 tags:
 - git
 - devops
+start:  2018-12-05T12:00:00
+end:    2018-12-05T15:00:00
 ---
 
 ¿Crees que el control de versiones es solo para programadores? Piensa otra vez.

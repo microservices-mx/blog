@@ -20,7 +20,10 @@ price:  500
 compare-at-price:   750
 comments: 
 tags:
-- 
+- Microservicioss
+- DevOps
+start:  2018-12-08T15:00:00
+end:    2018-12-08T20:00:00
 ---
 
 

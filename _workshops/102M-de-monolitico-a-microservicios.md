@@ -20,8 +20,10 @@ price:  500
 compare-at-price:   750
 comments: 
 tags:
-- microservices
-- devops
+- Microservicioss
+- DevOps
+start:  2018-12-08T09:00:00
+end:    2018-12-08T14:00:00
 ---
 
 Tienes una solución monlítica que te gustaría mejorar? Con microservicios, puedes
