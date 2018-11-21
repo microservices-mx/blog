@@ -13,6 +13,7 @@ google_analytics: 'UA-119132347-2'
 facebook_pixel: '1581831518729998'
 disqus: 'microservices_mx'
 sharethis: '<script async src="//platform-api.sharethis.com/js/sharethis.js#property=5bf2aa366ef16900117dd772&product="sticky-share-buttons"></script>'
+google_maps_api_key: AIzaSyAENVjp9A_W7lG_leihAKzI_KxIbaaRaL4
 
 # Authors
 authors:

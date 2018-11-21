@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% if jekyll.environment == 'production' %}
     <!-- To solve content over HTTPS, but requested an insecure XMLHttpRequest endpoint: https://stackoverflow.com/a/48700852/5078874 -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    {% endif %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
