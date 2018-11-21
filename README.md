@@ -4,4 +4,4 @@ Microservicios en tu idioma. Una fuente de contenido en español para los entusi
 
 ### Soporte, Contacto y Talleres
 
-[Envianos un mensaje](http://microservices.com.mx/contact.html).
+[Envianos un mensaje](//microservices.com.mx/contact.html).
