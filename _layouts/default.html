@@ -19,6 +19,14 @@
     <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet"/>
     <link href="{{ site.baseurl }}/assets/css/custom.css" rel="stylesheet"/>
 
+    {% comment %} Based on http://www.cody402.com/2017/09/19/How-to-Make-Awesome-Social-Media-Cards-With-Jekyll.html {% endcomment %}
+    <!-- Facebook OpenGraph -->
+    <meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ page.excerpt }}">
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="{% if page.image%}{{ page.image }}{% else %}{{ 'http://thuyontravel.com/wp-content/uploads/2017/01/1-600x385.jpg' }}{% endif %}">
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="{{site.url}}{{ site.baseurl }}{{page.url}}">
+    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="{{ page.title }}">
+    <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
+
 {{site.sharethis}}
     
 {% if jekyll.environment == 'production' %}    
